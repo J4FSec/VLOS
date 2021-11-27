@@ -20,4 +20,4 @@ ENV NOVNCPORT 8080
 COPY entry.sh /entry.sh
 RUN chmod +x /entry.sh
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "/entry.sh" ]
