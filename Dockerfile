@@ -1,5 +1,7 @@
 FROM kalilinux/kali-rolling:latest
 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get -y install kali-linux-core
